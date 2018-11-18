@@ -10,6 +10,6 @@
 3. 学习latex的使用方法
 
 #### 使用方式
-cp templates/template.tex 2018/MM-dd.tex
-然后进行题目的编写
-最后运行对应的tex文件，生成pdf文件
+1. `cp templates/template.tex yyyy/MM-dd.tex`
+2. 然后进行题目的编写
+3. 最后运行对应的tex文件，生成pdf文件
