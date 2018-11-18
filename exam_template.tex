@@ -2,7 +2,6 @@
 
 \usepackage[paperwidth=21cm,paperheight=29.7cm,
 top=2cm,bottom=2cm,right=2cm,left=2cm]{geometry}
-% \columnseprule=.4pt
 
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -20,25 +19,7 @@ top=2cm,bottom=2cm,right=2cm,left=2cm]{geometry}
 \usepackage{fancyhdr}
 \renewcommand{\headrulewidth}{0pt}
 \pagestyle{fancy}
-\fancyfoot[CO,CE]{第~\thepage~页~~共~\pageref{LastPage}~页}
-% \fancyhead[RE]{\leavevmode\vbox to0pt{\vss\rlap{\putzdxx }\vskip -26cm }} %奇数页眉的右边                       
-% \fancyhead[LO]{\leavevmode\vbox to0pt{\vss\rlap{\putzdx }\vskip -26cm }} %偶数页眉的左边 
-
-\newsavebox{\zdxa}%装订线
-
-\sbox{\zdxa}
-{\parbox{27cm}{\centering \heiti \hspace{1cm}
-		~~~ 班~级：\underline{\makebox[45mm][c]{}}~~~ 姓~名：\underline{\makebox[30mm][c]{}}~~~ 学~号：\underline{\makebox[30mm][c]{}} \\
-		\vspace{1mm}
-	  \dotfill{} 〇 \dotfill{} 密\dotfill{}封\dotfill{}线\dotfill{}〇\dotfill{} \\
-}}
-\newsavebox{\zdxb}%装订线
-\sbox{\zdxb}
-{\parbox{27cm}{\centering \heiti
-		\vspace{30mm}
-		\vspace{1mm}
-		\dotfill{} 〇 \dotfill{}密\dotfill{}封\dotfill{}线\dotfill{}〇\dotfill{} \\
-}}
+\fancyfoot[CO]{第~\thepage~页~~共~\pageref{LastPage}~页}
 
 \newcommand{\putzdx}{
 		\hspace{-1.7cm}\parbox{1cm}{\vspace{-1.5cm}
@@ -88,96 +69,9 @@ top=2cm,bottom=2cm,right=2cm,left=2cm]{geometry}
     		 \makebox[\lquarter][l]{C、#3~~~}%      
     		 \makebox[\lquarter][l]{D、#4~~~}}
     	 }}
-     
-\newcommand{\xxiii}[3]{\\[.5pt]%  
-	\settowidth{\la}{A、#1~~~}  
-	\settowidth{\lb}{B、#2~~~}
-	\settowidth{\lc}{C、#3~~~}  
-	\ifthenelse{\lengthtest{\la > \lb}}
-	{\setlength{\lmax}{\la}}{\setlength{\lmax}{\lb}}  
-	\ifthenelse{\lengthtest{\lmax < \lc}}  {\setlength{\lmax}{\lc}}  {}  
-	\setlength{\lhalf}{0.5\linewidth} 
-	\setlength{\lquarter}{0.25\linewidth}
-	\ifthenelse{\lengthtest{\lmax > \lhalf}}  
-	{\noindent{}A、#1 \\ B、#2 \\ C、#3 }  {  \ifthenelse{\lengthtest{\lmax > \lquarter}}  
-		{\noindent
-			\makebox[\lhalf][l]{A、#1~~~}% 
-			\makebox[\lhalf][l]{B、#2~~~}\\%
-			\makebox[\lhalf][l]{C、#3~~~}}% 
-		{\noindent
-			\makebox[\lquarter][l]{A、#1~~~}% 
-			\makebox[\lquarter][l]{B、#2~~~}%     
-			\makebox[\lquarter][l]{C、#3~~~}}
-}}
-
-\newcommand{\xxv}[5]{\\[.5pt]%  
-	\settowidth{\la}{A、#1~~~}  
-	\settowidth{\lb}{B、#2~~~}
-	\settowidth{\lc}{C、#3~~~} 
-	\settowidth{\ld}{D、#4~~~}  
-	\settowidth{\lee}{E、#5~~~}   
-	\ifthenelse{\lengthtest{\la > \lb}}
-	{\setlength{\lmax}{\la}}{\setlength{\lmax}{\lb}}  
-	\ifthenelse{\lengthtest{\lmax < \lc}}  {\setlength{\lmax}{\lc}}  {} 
-	\ifthenelse{\lengthtest{\lmax < \ld}}  {\setlength{\lmax}{\ld}}  {} 
-	\ifthenelse{\lengthtest{\lmax < \lee}}  {\setlength{\lmax}{\lee}}  {} 
-	\setlength{\lhalf}{0.5\linewidth} 
-	\setlength{\lquarter}{0.25\linewidth}
-	\ifthenelse{\lengthtest{\lmax > \lhalf}}  
-	{\noindent{}A、#1 \\ B、#2 \\ C、#3 \\ D、#4 \\ E、#5}  {  \ifthenelse{\lengthtest{\lmax > \lquarter}}  
-		{\noindent
-			\makebox[\lhalf][l]{A、#1~~~}% 
-			\makebox[\lhalf][l]{B、#2~~~}\\%
-			\makebox[\lhalf][l]{C、#3~~~}%
-		    \makebox[\lhalf][l]{D、#4~~~}\\%
-		    \makebox[\lhalf][l]{E、#5~~~}}% 
-		{\noindent
-			\makebox[\lquarter][l]{A、#1~~~}% 
-			\makebox[\lquarter][l]{B、#2~~~}%     
-			\makebox[\lquarter][l]{C、#3~~~}%
-		    \makebox[\lquarter][l]{D、#4~~~}\\%
-	        \makebox[\lquarter][l]{E、#5~~~}}
-}}
-
-\newcommand{\xxvi}[6]{\\[.5pt]%  
-	\settowidth{\la}{A、#1~~~}  
-	\settowidth{\lb}{B、#2~~~}
-	\settowidth{\lc}{C、#3~~~} 
-	\settowidth{\ld}{D、#4~~~}  
-	\settowidth{\lee}{E、#5~~~}
-	\settowidth{\lf}{E、#6~~~}     
-	\ifthenelse{\lengthtest{\la > \lb}}
-	{\setlength{\lmax}{\la}}{\setlength{\lmax}{\lb}}  
-	\ifthenelse{\lengthtest{\lmax < \lc}}  {\setlength{\lmax}{\lc}}  {} 
-	\ifthenelse{\lengthtest{\lmax < \ld}}  {\setlength{\lmax}{\ld}}  {} 
-	\ifthenelse{\lengthtest{\lmax < \lee}}  {\setlength{\lmax}{\lee}}  {}
-    \ifthenelse{\lengthtest{\lmax < \lf}}  {\setlength{\lmax}{\lf}}  {}  
-	\setlength{\lhalf}{0.5\linewidth} 
-	\setlength{\lquarter}{0.25\linewidth}
-	\ifthenelse{\lengthtest{\lmax > \lhalf}}  
-	{\noindent{}A、#1 \\ B、#2 \\ C、#3 \\ D、#4 \\ E、#5 \\ F、#6}  {  \ifthenelse{\lengthtest{\lmax > \lquarter}}  
-		{\noindent
-			\makebox[\lhalf][l]{A、#1~~~}% 
-			\makebox[\lhalf][l]{B、#2~~~}\\%
-			\makebox[\lhalf][l]{C、#3~~~}%
-			\makebox[\lhalf][l]{D、#4~~~}\\%
-			\makebox[\lhalf][l]{E、#5~~~}%
-		    \makebox[\lhalf][l]{F、#6~~~}}% 
-		{\noindent
-			\makebox[\lquarter][l]{A、#1~~~}% 
-			\makebox[\lquarter][l]{B、#2~~~}%     
-			\makebox[\lquarter][l]{C、#3~~~}%
-			\makebox[\lquarter][l]{D、#4~~~}\\%
-			\makebox[\lquarter][l]{E、#5~~~}%
-		    \makebox[\lquarter][l]{F、#6~~~}}%
-}}
 
 %填空题画线  \tk
 \newcommand{\tk}[1][1.5]{\;\underline{\mbox{\hspace{#1 cm}}}\,}
-
-%判断题后面加括号
-\newcommand{\pd}[1][1]{\nolinebreak\dotfill\mbox{\raisebox{-1.8pt}
-		{$\cdots$}(\hspace{#1 cm})}}
 
 \newif\ifprint
 \printfalse
