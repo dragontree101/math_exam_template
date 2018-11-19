@@ -5,3 +5,4 @@
 *.log
 *.xdv
 *.gz
+*.DS_Store
